@@ -38,6 +38,13 @@ export default function RootLayout({ children }) {
             gtag('config', 'AW-18478350290');
           `}
         </Script>
+        
+        {/* Google AdSense */}
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2359217193066885"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body className={inter.className}>
         <NextAuthProvider>
