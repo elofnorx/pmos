@@ -43,11 +43,11 @@ export default function RootLayout({ children }) {
         </Script>
         
         {/* Google AdSense */}
-        <Script
+        <script
+          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2359217193066885"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        ></script>
       </head>
       <body className={inter.className}>
         <NextAuthProvider>
