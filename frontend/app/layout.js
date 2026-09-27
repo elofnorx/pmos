@@ -10,10 +10,35 @@ export const metadata = {
 };
 
 import NextAuthProvider from '@/components/providers/NextAuthProvider';
+import Script from 'next/script';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="tr">
+      <head>
+        {/* Cookiebot (GDPR/Çerez Onay) */}
+        <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="9c6adf5a-de7d-4880-98e5-603afa3beadd"
+          strategy="beforeInteractive"
+        />
+        
+        {/* Google Tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18478350290"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-18478350290');
+          `}
+        </Script>
+      </head>
       <body className={inter.className}>
         <NextAuthProvider>
           {children}
