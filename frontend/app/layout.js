@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin', 'latin-ext'] });
 export const metadata = {
   title: 'PMOS | Kadın Sağlığı ve Yaşam Tarzı Platformu',
   description: 'Kadın sağlığı, yaşam tarzı, hamilelik ve annelik üzerine güncel, güvenilir ve ilham verici içerikler sunan platform.',
+  other: {
+    'google-adsense-account': 'ca-pub-2359217193066885'
+  }
 };
 
 import NextAuthProvider from '@/components/providers/NextAuthProvider';
